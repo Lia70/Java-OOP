@@ -29,6 +29,33 @@ public class Main {
         for (Animal a: animals) a.swim();
         System.out.println();
     }
+
+    private Object name;
+
+    public void toGo() {
+        System.out.println(String.format("%s %s walked away!", this.getType(), this.name));
+    }
+
+    private Object getType() {
+        return null;
+    }
+    void fly() {
+        System.out.println(String.format("%s %s flied away!", this.getType(), this.name));
+    }
+
+    public void swim() {
+        System.out.println(String.format("%s %s swam away!", this.getType(), this.name));
+    }
+
+    public int swimLength;
+    public int toGoLength;
+    public double flyHeight;
+
+    public void Animal(int toGoLength, int swimLength, double flyHeight) {
+           this.toGoLength = toGoLength;
+           this.swimLength = swimLength;
+           this.flyHeight = flyHeight;
+    }
     
  }
 
