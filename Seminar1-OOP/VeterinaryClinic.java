@@ -2,7 +2,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class VeterinaryClinic {
+public class VeterinaryClinic<Swimmable, Speakable, Goable, Flyable> {
     private List<Animal> patients = new ArrayList<>();
 
     public List<Animal> getPatients() {
@@ -29,5 +29,23 @@ public class VeterinaryClinic {
             }
         }
         return result;
+    }
+
+    public List<Swimmable> getSwimmingAnimals() {
+        List<Swimmable> swimmingAnimals = new ArrayList<>();
+
+        for (Animal a: this.animals)
+            if (a instanceof Swimmable) swimmingAnimals.add((Swimmable) a);
+
+        return swimmingAnimals;
+    }
+
+    public List<Flyable> getFlyingAnimals() {
+        List<Flyable> flyingAnimals = new ArrayList<>();
+
+        for (Animal a: this.animals)
+            if (a instanceof Flyable) flyingAnimals.add((Flyable) a);
+
+        return flyingAnimals;
     }
 }

@@ -8,7 +8,7 @@ public class Main {
         cat.setName("barsic");
         System.out.println(cat.getName());
         Dog dog = new Dog("max", new Chumka("chumka"), "petr",
-                LocalDate.of(3, 12, 21));
+            LocalDate.of(3, 12, 21));
         System.out.println(dog.getName());
         System.out.println(dog.getIllness());
         dog.getIllness().heal();
